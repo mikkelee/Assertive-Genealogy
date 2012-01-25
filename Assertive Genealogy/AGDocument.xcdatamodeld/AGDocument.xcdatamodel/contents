@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AGAssertion" representedClassName="AGAssertion" isAbstract="YES" parentEntity="AGObject">
+        <relationship name="frameGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="assertions" inverseEntity="AGFrameGroup"/>
+    </entity>
+    <entity name="AGAttribute" representedClassName="AGAttribute" parentEntity="AGProperty">
+        <attribute name="key" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="AGEntity" representedClassName="AGEntity" parentEntity="AGAssertion">
+        <relationship name="inImages" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGImageEntities" inverseName="target" inverseEntity="AGImageEntities"/>
+        <relationship name="inRelationships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGRelationship" inverseName="target" inverseEntity="AGRelationship"/>
+        <relationship name="properties" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGProperty" inverseName="subjectEntity" inverseEntity="AGProperty"/>
+        <relationship name="supposition" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSupposition" inverseName="entities" inverseEntity="AGSupposition"/>
+    </entity>
+    <entity name="AGFrame" representedClassName="AGFrame" parentEntity="AGWindowObject">
+        <attribute name="rectString" optional="YES" attributeType="String"/>
+        <attribute name="transcriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="frameGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="frames" inverseEntity="AGFrameGroup"/>
+        <relationship name="imageEntities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGImageEntities" inverseName="frame" inverseEntity="AGImageEntities" syncable="YES"/>
+    </entity>
+    <entity name="AGFrameGroup" representedClassName="AGFrameGroup" parentEntity="AGWindowObject">
+        <relationship name="assertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGAssertion" inverseName="frameGroup" inverseEntity="AGAssertion" syncable="YES"/>
+        <relationship name="frames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="frameGroup" inverseEntity="AGFrame"/>
+        <relationship name="sourceItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSourceItem" inverseName="frameGroups" inverseEntity="AGSourceItem"/>
+    </entity>
+    <entity name="AGImageEntities" representedClassName="AGImageEntities">
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="frame" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="imageEntities" inverseEntity="AGFrame"/>
+        <relationship name="target" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="inImages" inverseEntity="AGEntity"/>
+    </entity>
+    <entity name="AGNote" representedClassName="AGNote" parentEntity="AGObject">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <relationship name="object" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGObject" inverseName="notes" inverseEntity="AGObject"/>
+    </entity>
+    <entity name="AGObject" representedClassName="AGObject" isAbstract="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date"/>
+        <attribute name="lastModified" optional="YES" attributeType="Date"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGNote" inverseName="object" inverseEntity="AGNote"/>
+    </entity>
+    <entity name="AGProperty" representedClassName="AGProperty" isAbstract="YES" parentEntity="AGAssertion">
+        <attribute name="negation" optional="YES" attributeType="Boolean" defaultValueString="NO"/>
+        <relationship name="subjectEntity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="properties" inverseEntity="AGEntity"/>
+    </entity>
+    <entity name="AGRelationship" representedClassName="AGRelationship" parentEntity="AGProperty">
+        <relationship name="target" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="inRelationships" inverseEntity="AGEntity"/>
+    </entity>
+    <entity name="AGSource" representedClassName="AGSource" parentEntity="AGTaggedObject">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pluginName" optional="YES" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AGSourceItem" inverseName="source" inverseEntity="AGSourceItem"/>
+    </entity>
+    <entity name="AGSourceItem" representedClassName="AGSourceItem" parentEntity="AGTaggedObject">
+        <attribute name="imagePath" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="frameGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="sourceItem" inverseEntity="AGFrameGroup"/>
+        <relationship name="source" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSource" inverseName="items" inverseEntity="AGSource"/>
+    </entity>
+    <entity name="AGSupposition" representedClassName="AGSupposition" parentEntity="AGObject">
+        <attribute name="creator" optional="YES" attributeType="String"/>
+        <attribute name="grade" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0"/>
+        <attribute name="negation" optional="YES" attributeType="Boolean" defaultValueString="NO"/>
+        <relationship name="entities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="supposition" inverseEntity="AGEntity"/>
+    </entity>
+    <entity name="AGTag" representedClassName="AGTag" syncable="YES">
+        <attribute name="tagKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tagValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="object" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGTaggedObject" inverseName="tags" inverseEntity="AGTaggedObject" syncable="YES"/>
+    </entity>
+    <entity name="AGTaggedObject" representedClassName="AGTaggedObject" isAbstract="YES" parentEntity="AGWindowObject" syncable="YES">
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGTag" inverseName="object" inverseEntity="AGTag" syncable="YES"/>
+    </entity>
+    <entity name="AGWindowObject" representedClassName="AGWindowObject" isAbstract="YES" syncable="YES"/>
+    <elements>
+        <element name="AGAssertion" positionX="-218" positionY="2961" width="128" height="60"/>
+        <element name="AGAttribute" positionX="-396" positionY="3213" width="128" height="75"/>
+        <element name="AGEntity" positionX="-47" positionY="3087" width="128" height="90"/>
+        <element name="AGFrame" positionX="-29" positionY="2679" width="128" height="105"/>
+        <element name="AGFrameGroup" positionX="-36" positionY="2529" width="128" height="90"/>
+        <element name="AGImageEntities" positionX="234" positionY="2853" width="128" height="90"/>
+        <element name="AGNote" positionX="-657" positionY="2826" width="128" height="90"/>
+        <element name="AGObject" positionX="-416" positionY="2808" width="128" height="90"/>
+        <element name="AGProperty" positionX="-315" positionY="3069" width="128" height="75"/>
+        <element name="AGRelationship" positionX="-225" positionY="3231" width="128" height="60"/>
+        <element name="AGSource" positionX="-405" positionY="2520" width="128" height="90"/>
+        <element name="AGSourceItem" positionX="-209" positionY="2493" width="128" height="120"/>
+        <element name="AGSupposition" positionX="216" positionY="3024" width="128" height="105"/>
+        <element name="AGTag" positionX="-486" positionY="2403" width="128" height="90"/>
+        <element name="AGTaggedObject" positionX="-225" positionY="2358" width="128" height="60"/>
+        <element name="AGWindowObject" positionX="160" positionY="192" width="128" height="45"/>
+    </elements>
+</model>

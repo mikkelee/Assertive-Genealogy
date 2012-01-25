@@ -1,0 +1,946 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E35CCF413F04E5C0081D5FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35CCF313F04E5C0081D5FB /* Cocoa.framework */; };
+		3E35CCFE13F04E5C0081D5FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E35CCFC13F04E5C0081D5FB /* InfoPlist.strings */; };
+		3E35CD0013F04E5C0081D5FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E35CCFF13F04E5C0081D5FB /* main.m */; };
+		3E35CD0413F04E5C0081D5FB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3E35CD0213F04E5C0081D5FB /* Credits.rtf */; };
+		3E35CD0713F04E5C0081D5FB /* AGDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E35CD0613F04E5C0081D5FB /* AGDocument.m */; };
+		3E35CD0A13F04E5C0081D5FB /* AGDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E35CD0813F04E5C0081D5FB /* AGDocument.xib */; };
+		3E35CD0D13F04E5D0081D5FB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E35CD0B13F04E5D0081D5FB /* MainMenu.xib */; };
+		3E35CD1013F04E5D0081D5FB /* AGDocument.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E35CD0E13F04E5D0081D5FB /* AGDocument.xcdatamodeld */; };
+		3E35CD1813F04E5D0081D5FB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35CD1713F04E5D0081D5FB /* SenTestingKit.framework */; };
+		3E35CD1913F04E5D0081D5FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35CCF313F04E5C0081D5FB /* Cocoa.framework */; };
+		3E35CD2113F04E5D0081D5FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E35CD1F13F04E5D0081D5FB /* InfoPlist.strings */; };
+		3E35CD2513F04E5D0081D5FB /* Assertive_Genealogy_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E35CD2413F04E5D0081D5FB /* Assertive_Genealogy_Tests.m */; };
+		3E5887E114C9919800B31327 /* AGSourceItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5887E014C9919800B31327 /* AGSourceItemController.m */; };
+		3E58F6CF14C0C3D7004B6DFE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58F6CD14C0C3BD004B6DFE /* QuartzCore.framework */; };
+		3E58F6D214C0C897004B6DFE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E58F6D014C0C884004B6DFE /* Quartz.framework */; };
+		3E58F71A14C5972E004B6DFE /* OrderedSetArrayValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F71914C5972E004B6DFE /* OrderedSetArrayValueTransformer.m */; };
+		3E58F74914C5FD2D004B6DFE /* AGSourceItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E58F74814C5FD2C004B6DFE /* AGSourceItem.xib */; };
+		3E58F79514C6E751004B6DFE /* AGObjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F79314C6E750004B6DFE /* AGObjectWindowController.m */; };
+		3E58F7C814C88785004B6DFE /* _AGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F7C514C88784004B6DFE /* _AGTag.m */; };
+		3E58F7C914C88785004B6DFE /* _AGTaggedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F7C714C88785004B6DFE /* _AGTaggedObject.m */; };
+		3E58F7CE14C887A0004B6DFE /* AGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F7CB14C8879F004B6DFE /* AGTag.m */; };
+		3E58F7CF14C887A0004B6DFE /* AGTaggedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F7CD14C8879F004B6DFE /* AGTaggedObject.m */; };
+		3E7A8E7214BDE4C60037BDD1 /* AGPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A8E7114BDE4C60037BDD1 /* AGPluginManager.m */; };
+		3EAF4F981438E643009BB96A /* TestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF4F971438E643009BB96A /* TestWindow.xib */; };
+		3EC257E214C9C18100A6DE70 /* AGSourceItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC257E114C9C18100A6DE70 /* AGSourceItemImageView.m */; };
+		3EC257F514CF505B00A6DE70 /* _AGWindowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC257F414CF505B00A6DE70 /* _AGWindowObject.m */; };
+		3EC257F814CF506600A6DE70 /* AGWindowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC257F714CF506600A6DE70 /* AGWindowObject.m */; };
+		3EC257FA14CF522000A6DE70 /* AGFrameGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC257F914CF521F00A6DE70 /* AGFrameGroup.xib */; };
+		3EF5387714BD8F5C00035875 /* _AGAssertion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5383C14BD8F5C00035875 /* _AGAssertion.m */; };
+		3EF5387814BD8F5C00035875 /* _AGAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5383E14BD8F5C00035875 /* _AGAttribute.m */; };
+		3EF5387914BD8F5C00035875 /* _AGEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384014BD8F5C00035875 /* _AGEntity.m */; };
+		3EF5387A14BD8F5C00035875 /* _AGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384214BD8F5C00035875 /* _AGFrame.m */; };
+		3EF5387B14BD8F5C00035875 /* _AGFrameGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384414BD8F5C00035875 /* _AGFrameGroup.m */; };
+		3EF5387D14BD8F5C00035875 /* _AGImageEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384814BD8F5C00035875 /* _AGImageEntities.m */; };
+		3EF5387E14BD8F5C00035875 /* _AGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384A14BD8F5C00035875 /* _AGNote.m */; };
+		3EF5387F14BD8F5C00035875 /* _AGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384C14BD8F5C00035875 /* _AGObject.m */; };
+		3EF5388014BD8F5C00035875 /* _AGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5384E14BD8F5C00035875 /* _AGProperty.m */; };
+		3EF5388114BD8F5C00035875 /* _AGRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385014BD8F5C00035875 /* _AGRelationship.m */; };
+		3EF5388214BD8F5C00035875 /* _AGSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385214BD8F5C00035875 /* _AGSource.m */; };
+		3EF5388314BD8F5C00035875 /* _AGSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385414BD8F5C00035875 /* _AGSourceItem.m */; };
+		3EF5388414BD8F5C00035875 /* _AGSupposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385614BD8F5C00035875 /* _AGSupposition.m */; };
+		3EF5388614BD8F5C00035875 /* AGAssertion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385A14BD8F5C00035875 /* AGAssertion.m */; };
+		3EF5388714BD8F5C00035875 /* AGAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385C14BD8F5C00035875 /* AGAttribute.m */; };
+		3EF5388814BD8F5C00035875 /* AGEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5385E14BD8F5C00035875 /* AGEntity.m */; };
+		3EF5388914BD8F5C00035875 /* AGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386014BD8F5C00035875 /* AGFrame.m */; };
+		3EF5388A14BD8F5C00035875 /* AGFrameGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386214BD8F5C00035875 /* AGFrameGroup.m */; };
+		3EF5388C14BD8F5C00035875 /* AGImageEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386614BD8F5C00035875 /* AGImageEntities.m */; };
+		3EF5388D14BD8F5C00035875 /* AGNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386814BD8F5C00035875 /* AGNote.m */; };
+		3EF5388E14BD8F5C00035875 /* AGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386A14BD8F5C00035875 /* AGObject.m */; };
+		3EF5388F14BD8F5C00035875 /* AGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386C14BD8F5C00035875 /* AGProperty.m */; };
+		3EF5389014BD8F5C00035875 /* AGRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5386E14BD8F5C00035875 /* AGRelationship.m */; };
+		3EF5389114BD8F5C00035875 /* AGSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5387014BD8F5C00035875 /* AGSource.m */; };
+		3EF5389214BD8F5C00035875 /* AGSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5387214BD8F5C00035875 /* AGSourceItem.m */; };
+		3EF5389314BD8F5C00035875 /* AGSupposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5387414BD8F5C00035875 /* AGSupposition.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E0D781814D0539000AF885A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E78338014C0744C0027B418 /* Arkivalier Online.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E78336B14C0744C0027B418;
+			remoteInfo = "Arkivalier Online";
+		};
+		3E0D781A14D0539000AF885A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E78338014C0744C0027B418 /* Arkivalier Online.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E78338B14C074790027B418;
+			remoteInfo = "Arkivalier Online Tests";
+		};
+		3E0D782314D0539900AF885A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E58F6F314C3872D004B6DFE /* Local Folder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E58F6DE14C3872D004B6DFE;
+			remoteInfo = "Local Folder";
+		};
+		3E0D782514D0539900AF885A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E58F6F314C3872D004B6DFE /* Local Folder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3E58F6FE14C38743004B6DFE;
+			remoteInfo = "Local Folder Tests";
+		};
+		3E35CD1A13F04E5D0081D5FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E35CCE613F04E5C0081D5FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E35CCEE13F04E5C0081D5FB;
+			remoteInfo = "Assertive Genealogy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E35CCEF13F04E5C0081D5FB /* Assertive Genealogy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assertive Genealogy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E35CCF313F04E5C0081D5FB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3E35CCF613F04E5C0081D5FB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3E35CCF713F04E5C0081D5FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3E35CCF813F04E5C0081D5FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E35CCFB13F04E5C0081D5FB /* Assertive Genealogy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Assertive Genealogy-Info.plist"; sourceTree = "<group>"; };
+		3E35CCFD13F04E5C0081D5FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E35CCFF13F04E5C0081D5FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E35CD0113F04E5C0081D5FB /* Assertive Genealogy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Assertive Genealogy-Prefix.pch"; sourceTree = "<group>"; };
+		3E35CD0313F04E5C0081D5FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3E35CD0513F04E5C0081D5FB /* AGDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGDocument.h; sourceTree = "<group>"; };
+		3E35CD0613F04E5C0081D5FB /* AGDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGDocument.m; sourceTree = "<group>"; };
+		3E35CD0913F04E5C0081D5FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AGDocument.xib; sourceTree = "<group>"; };
+		3E35CD0C13F04E5D0081D5FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3E35CD0F13F04E5D0081D5FB /* AGDocument.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AGDocument.xcdatamodel; sourceTree = "<group>"; };
+		3E35CD1613F04E5D0081D5FB /* Assertive Genealogy Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assertive Genealogy Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E35CD1713F04E5D0081D5FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3E35CD1E13F04E5D0081D5FB /* Assertive Genealogy Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Assertive Genealogy Tests-Info.plist"; path = "Assertive Genealogy Tests/Assertive Genealogy Tests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3E35CD2013F04E5D0081D5FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E35CD2413F04E5D0081D5FB /* Assertive_Genealogy_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Assertive_Genealogy_Tests.m; path = "Assertive Genealogy Tests/Assertive_Genealogy_Tests.m"; sourceTree = SOURCE_ROOT; };
+		3E5887DF14C9919800B31327 /* AGSourceItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSourceItemController.h; sourceTree = "<group>"; };
+		3E5887E014C9919800B31327 /* AGSourceItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSourceItemController.m; sourceTree = "<group>"; };
+		3E58F6CD14C0C3BD004B6DFE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E58F6D014C0C884004B6DFE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		3E58F6F314C3872D004B6DFE /* Local Folder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Local Folder.xcodeproj"; path = "../Plugins/Local Folder/Local Folder.xcodeproj"; sourceTree = "<group>"; };
+		3E58F71814C5972D004B6DFE /* OrderedSetArrayValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedSetArrayValueTransformer.h; sourceTree = "<group>"; };
+		3E58F71914C5972E004B6DFE /* OrderedSetArrayValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedSetArrayValueTransformer.m; sourceTree = "<group>"; };
+		3E58F74814C5FD2C004B6DFE /* AGSourceItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGSourceItem.xib; sourceTree = "<group>"; };
+		3E58F79214C6E750004B6DFE /* AGObjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGObjectWindowController.h; sourceTree = "<group>"; };
+		3E58F79314C6E750004B6DFE /* AGObjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGObjectWindowController.m; sourceTree = "<group>"; };
+		3E58F7C414C88784004B6DFE /* _AGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTag.h; sourceTree = "<group>"; };
+		3E58F7C514C88784004B6DFE /* _AGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTag.m; sourceTree = "<group>"; };
+		3E58F7C614C88784004B6DFE /* _AGTaggedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGTaggedObject.h; sourceTree = "<group>"; };
+		3E58F7C714C88785004B6DFE /* _AGTaggedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGTaggedObject.m; sourceTree = "<group>"; };
+		3E58F7CA14C8879E004B6DFE /* AGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTag.h; sourceTree = "<group>"; };
+		3E58F7CB14C8879F004B6DFE /* AGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTag.m; sourceTree = "<group>"; };
+		3E58F7CC14C8879F004B6DFE /* AGTaggedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTaggedObject.h; sourceTree = "<group>"; };
+		3E58F7CD14C8879F004B6DFE /* AGTaggedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTaggedObject.m; sourceTree = "<group>"; };
+		3E78338014C0744C0027B418 /* Arkivalier Online.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Arkivalier Online.xcodeproj"; path = "../Plugins/Arkivalier Online/Arkivalier Online.xcodeproj"; sourceTree = "<group>"; };
+		3E7A8E7014BDE4C60037BDD1 /* AGPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPluginManager.h; sourceTree = "<group>"; };
+		3E7A8E7114BDE4C60037BDD1 /* AGPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPluginManager.m; sourceTree = "<group>"; };
+		3E7A8E7414BDF9670037BDD1 /* AGPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPluginProtocol.h; sourceTree = "<group>"; };
+		3EAF4F971438E643009BB96A /* TestWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestWindow.xib; sourceTree = "<group>"; };
+		3EC257E014C9C18100A6DE70 /* AGSourceItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGSourceItemImageView.h; path = "Assertive Genealogy/AGSourceItemImageView.h"; sourceTree = SOURCE_ROOT; };
+		3EC257E114C9C18100A6DE70 /* AGSourceItemImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGSourceItemImageView.m; path = "Assertive Genealogy/AGSourceItemImageView.m"; sourceTree = SOURCE_ROOT; };
+		3EC257F314CF505A00A6DE70 /* _AGWindowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGWindowObject.h; sourceTree = "<group>"; };
+		3EC257F414CF505B00A6DE70 /* _AGWindowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGWindowObject.m; sourceTree = "<group>"; };
+		3EC257F614CF506500A6DE70 /* AGWindowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGWindowObject.h; sourceTree = "<group>"; };
+		3EC257F714CF506600A6DE70 /* AGWindowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGWindowObject.m; sourceTree = "<group>"; };
+		3EC257F914CF521F00A6DE70 /* AGFrameGroup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGFrameGroup.xib; sourceTree = "<group>"; };
+		3EF5383714BD89EB00035875 /* mogenerator.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = mogenerator.sh; path = ../mogenerator.sh; sourceTree = "<group>"; };
+		3EF5383B14BD8F5C00035875 /* _AGAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGAssertion.h; sourceTree = "<group>"; };
+		3EF5383C14BD8F5C00035875 /* _AGAssertion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGAssertion.m; sourceTree = "<group>"; };
+		3EF5383D14BD8F5C00035875 /* _AGAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGAttribute.h; sourceTree = "<group>"; };
+		3EF5383E14BD8F5C00035875 /* _AGAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGAttribute.m; sourceTree = "<group>"; };
+		3EF5383F14BD8F5C00035875 /* _AGEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGEntity.h; sourceTree = "<group>"; };
+		3EF5384014BD8F5C00035875 /* _AGEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGEntity.m; sourceTree = "<group>"; };
+		3EF5384114BD8F5C00035875 /* _AGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGFrame.h; sourceTree = "<group>"; };
+		3EF5384214BD8F5C00035875 /* _AGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGFrame.m; sourceTree = "<group>"; };
+		3EF5384314BD8F5C00035875 /* _AGFrameGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGFrameGroup.h; sourceTree = "<group>"; };
+		3EF5384414BD8F5C00035875 /* _AGFrameGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGFrameGroup.m; sourceTree = "<group>"; };
+		3EF5384714BD8F5C00035875 /* _AGImageEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGImageEntities.h; sourceTree = "<group>"; };
+		3EF5384814BD8F5C00035875 /* _AGImageEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGImageEntities.m; sourceTree = "<group>"; };
+		3EF5384914BD8F5C00035875 /* _AGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGNote.h; sourceTree = "<group>"; };
+		3EF5384A14BD8F5C00035875 /* _AGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGNote.m; sourceTree = "<group>"; };
+		3EF5384B14BD8F5C00035875 /* _AGObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGObject.h; sourceTree = "<group>"; };
+		3EF5384C14BD8F5C00035875 /* _AGObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGObject.m; sourceTree = "<group>"; };
+		3EF5384D14BD8F5C00035875 /* _AGProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGProperty.h; sourceTree = "<group>"; };
+		3EF5384E14BD8F5C00035875 /* _AGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGProperty.m; sourceTree = "<group>"; };
+		3EF5384F14BD8F5C00035875 /* _AGRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGRelationship.h; sourceTree = "<group>"; };
+		3EF5385014BD8F5C00035875 /* _AGRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGRelationship.m; sourceTree = "<group>"; };
+		3EF5385114BD8F5C00035875 /* _AGSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGSource.h; sourceTree = "<group>"; };
+		3EF5385214BD8F5C00035875 /* _AGSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGSource.m; sourceTree = "<group>"; };
+		3EF5385314BD8F5C00035875 /* _AGSourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGSourceItem.h; sourceTree = "<group>"; };
+		3EF5385414BD8F5C00035875 /* _AGSourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGSourceItem.m; sourceTree = "<group>"; };
+		3EF5385514BD8F5C00035875 /* _AGSupposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGSupposition.h; sourceTree = "<group>"; };
+		3EF5385614BD8F5C00035875 /* _AGSupposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGSupposition.m; sourceTree = "<group>"; };
+		3EF5385914BD8F5C00035875 /* AGAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAssertion.h; sourceTree = "<group>"; };
+		3EF5385A14BD8F5C00035875 /* AGAssertion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAssertion.m; sourceTree = "<group>"; };
+		3EF5385B14BD8F5C00035875 /* AGAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAttribute.h; sourceTree = "<group>"; };
+		3EF5385C14BD8F5C00035875 /* AGAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAttribute.m; sourceTree = "<group>"; };
+		3EF5385D14BD8F5C00035875 /* AGEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGEntity.h; sourceTree = "<group>"; };
+		3EF5385E14BD8F5C00035875 /* AGEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGEntity.m; sourceTree = "<group>"; };
+		3EF5385F14BD8F5C00035875 /* AGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGFrame.h; sourceTree = "<group>"; };
+		3EF5386014BD8F5C00035875 /* AGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGFrame.m; sourceTree = "<group>"; };
+		3EF5386114BD8F5C00035875 /* AGFrameGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGFrameGroup.h; sourceTree = "<group>"; };
+		3EF5386214BD8F5C00035875 /* AGFrameGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGFrameGroup.m; sourceTree = "<group>"; };
+		3EF5386514BD8F5C00035875 /* AGImageEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImageEntities.h; sourceTree = "<group>"; };
+		3EF5386614BD8F5C00035875 /* AGImageEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGImageEntities.m; sourceTree = "<group>"; };
+		3EF5386714BD8F5C00035875 /* AGNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGNote.h; sourceTree = "<group>"; };
+		3EF5386814BD8F5C00035875 /* AGNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGNote.m; sourceTree = "<group>"; };
+		3EF5386914BD8F5C00035875 /* AGObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGObject.h; sourceTree = "<group>"; };
+		3EF5386A14BD8F5C00035875 /* AGObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGObject.m; sourceTree = "<group>"; };
+		3EF5386B14BD8F5C00035875 /* AGProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProperty.h; sourceTree = "<group>"; };
+		3EF5386C14BD8F5C00035875 /* AGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProperty.m; sourceTree = "<group>"; };
+		3EF5386D14BD8F5C00035875 /* AGRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGRelationship.h; sourceTree = "<group>"; };
+		3EF5386E14BD8F5C00035875 /* AGRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGRelationship.m; sourceTree = "<group>"; };
+		3EF5386F14BD8F5C00035875 /* AGSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSource.h; sourceTree = "<group>"; };
+		3EF5387014BD8F5C00035875 /* AGSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSource.m; sourceTree = "<group>"; };
+		3EF5387114BD8F5C00035875 /* AGSourceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSourceItem.h; sourceTree = "<group>"; };
+		3EF5387214BD8F5C00035875 /* AGSourceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSourceItem.m; sourceTree = "<group>"; };
+		3EF5387314BD8F5C00035875 /* AGSupposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSupposition.h; sourceTree = "<group>"; };
+		3EF5387414BD8F5C00035875 /* AGSupposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSupposition.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E35CCEC13F04E5C0081D5FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E58F6D214C0C897004B6DFE /* Quartz.framework in Frameworks */,
+				3E35CCF413F04E5C0081D5FB /* Cocoa.framework in Frameworks */,
+				3E58F6CF14C0C3D7004B6DFE /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E35CD1213F04E5D0081D5FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E35CD1813F04E5D0081D5FB /* SenTestingKit.framework in Frameworks */,
+				3E35CD1913F04E5D0081D5FB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E0D778114CF75FF00AF885A /* Plugin Management */ = {
+			isa = PBXGroup;
+			children = (
+				3E7A8E7414BDF9670037BDD1 /* AGPluginProtocol.h */,
+				3E7A8E7014BDE4C60037BDD1 /* AGPluginManager.h */,
+				3E7A8E7114BDE4C60037BDD1 /* AGPluginManager.m */,
+			);
+			name = "Plugin Management";
+			sourceTree = "<group>";
+		};
+		3E0D778214CF761700AF885A /* Source Item window */ = {
+			isa = PBXGroup;
+			children = (
+				3E58F74814C5FD2C004B6DFE /* AGSourceItem.xib */,
+				3E5887DF14C9919800B31327 /* AGSourceItemController.h */,
+				3E5887E014C9919800B31327 /* AGSourceItemController.m */,
+				3EC257E014C9C18100A6DE70 /* AGSourceItemImageView.h */,
+				3EC257E114C9C18100A6DE70 /* AGSourceItemImageView.m */,
+			);
+			name = "Source Item window";
+			sourceTree = "<group>";
+		};
+		3E0D778314CF761B00AF885A /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CD0813F04E5C0081D5FB /* AGDocument.xib */,
+				3E35CD0513F04E5C0081D5FB /* AGDocument.h */,
+				3E35CD0613F04E5C0081D5FB /* AGDocument.m */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		3E0D778414CF766900AF885A /* Frame Group window */ = {
+			isa = PBXGroup;
+			children = (
+				3EC257F914CF521F00A6DE70 /* AGFrameGroup.xib */,
+			);
+			name = "Frame Group window";
+			sourceTree = "<group>";
+		};
+		3E0D778514CF779200AF885A /* Misc scripts etc */ = {
+			isa = PBXGroup;
+			children = (
+				3EF5383714BD89EB00035875 /* mogenerator.sh */,
+			);
+			name = "Misc scripts etc";
+			sourceTree = "<group>";
+		};
+		3E0D781414D0539000AF885A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D781914D0539000AF885A /* Arkivalier Online.agplugin */,
+				3E0D781B14D0539000AF885A /* Arkivalier Online Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E0D781F14D0539900AF885A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D782414D0539900AF885A /* Local Folder.agplugin */,
+				3E0D782614D0539900AF885A /* Local Folder Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E35CCE413F04E5C0081D5FB = {
+			isa = PBXGroup;
+			children = (
+				3EA32E5514BE1804004D7C4C /* Plugins */,
+				3E35CCF913F04E5C0081D5FB /* Assertive Genealogy */,
+				3E35CD1C13F04E5D0081D5FB /* Assertive Genealogy Tests */,
+				3E35CCF213F04E5C0081D5FB /* Frameworks */,
+				3E35CCF013F04E5C0081D5FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E35CCF013F04E5C0081D5FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CCEF13F04E5C0081D5FB /* Assertive Genealogy.app */,
+				3E35CD1613F04E5D0081D5FB /* Assertive Genealogy Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E35CCF213F04E5C0081D5FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E58F6D014C0C884004B6DFE /* Quartz.framework */,
+				3E58F6CD14C0C3BD004B6DFE /* QuartzCore.framework */,
+				3E35CCF313F04E5C0081D5FB /* Cocoa.framework */,
+				3E35CD1713F04E5D0081D5FB /* SenTestingKit.framework */,
+				3E35CCF513F04E5C0081D5FB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E35CCF513F04E5C0081D5FB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CCF613F04E5C0081D5FB /* AppKit.framework */,
+				3E35CCF713F04E5C0081D5FB /* CoreData.framework */,
+				3E35CCF813F04E5C0081D5FB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3E35CCF913F04E5C0081D5FB /* Assertive Genealogy */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CD0B13F04E5D0081D5FB /* MainMenu.xib */,
+				3EF5383914BD8F5C00035875 /* Model */,
+				3E0D778314CF761B00AF885A /* Document */,
+				3E0D778214CF761700AF885A /* Source Item window */,
+				3E0D778414CF766900AF885A /* Frame Group window */,
+				3E0D778114CF75FF00AF885A /* Plugin Management */,
+				3EAF4F971438E643009BB96A /* TestWindow.xib */,
+				3E58F71814C5972D004B6DFE /* OrderedSetArrayValueTransformer.h */,
+				3E58F71914C5972E004B6DFE /* OrderedSetArrayValueTransformer.m */,
+				3E58F79214C6E750004B6DFE /* AGObjectWindowController.h */,
+				3E58F79314C6E750004B6DFE /* AGObjectWindowController.m */,
+				3E0D778514CF779200AF885A /* Misc scripts etc */,
+				3E35CCFA13F04E5C0081D5FB /* Supporting Files */,
+			);
+			path = "Assertive Genealogy";
+			sourceTree = "<group>";
+		};
+		3E35CCFA13F04E5C0081D5FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CCFB13F04E5C0081D5FB /* Assertive Genealogy-Info.plist */,
+				3E35CCFC13F04E5C0081D5FB /* InfoPlist.strings */,
+				3E35CCFF13F04E5C0081D5FB /* main.m */,
+				3E35CD0113F04E5C0081D5FB /* Assertive Genealogy-Prefix.pch */,
+				3E35CD0213F04E5C0081D5FB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E35CD1C13F04E5D0081D5FB /* Assertive Genealogy Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CD2413F04E5D0081D5FB /* Assertive_Genealogy_Tests.m */,
+				3E35CD1D13F04E5D0081D5FB /* Supporting Files */,
+			);
+			path = "Assertive Genealogy Tests";
+			sourceTree = "<group>";
+		};
+		3E35CD1D13F04E5D0081D5FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CD1E13F04E5D0081D5FB /* Assertive Genealogy Tests-Info.plist */,
+				3E35CD1F13F04E5D0081D5FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E5887E214C9932F00B31327 /* Frames */ = {
+			isa = PBXGroup;
+			children = (
+				3EF5386114BD8F5C00035875 /* AGFrameGroup.h */,
+				3EF5386214BD8F5C00035875 /* AGFrameGroup.m */,
+				3EF5385F14BD8F5C00035875 /* AGFrame.h */,
+				3EF5386014BD8F5C00035875 /* AGFrame.m */,
+				3EF5386514BD8F5C00035875 /* AGImageEntities.h */,
+				3EF5386614BD8F5C00035875 /* AGImageEntities.m */,
+			);
+			name = Frames;
+			sourceTree = "<group>";
+		};
+		3E5887E314C9933500B31327 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3EF5386F14BD8F5C00035875 /* AGSource.h */,
+				3EF5387014BD8F5C00035875 /* AGSource.m */,
+				3EF5387114BD8F5C00035875 /* AGSourceItem.h */,
+				3EF5387214BD8F5C00035875 /* AGSourceItem.m */,
+				3E58F7CA14C8879E004B6DFE /* AGTag.h */,
+				3E58F7CB14C8879F004B6DFE /* AGTag.m */,
+				3E58F7CC14C8879F004B6DFE /* AGTaggedObject.h */,
+				3E58F7CD14C8879F004B6DFE /* AGTaggedObject.m */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		3E5887E414C9933800B31327 /* Assertions */ = {
+			isa = PBXGroup;
+			children = (
+				3EF5386714BD8F5C00035875 /* AGNote.h */,
+				3EF5386814BD8F5C00035875 /* AGNote.m */,
+				3EF5386914BD8F5C00035875 /* AGObject.h */,
+				3EF5386A14BD8F5C00035875 /* AGObject.m */,
+				3EF5387314BD8F5C00035875 /* AGSupposition.h */,
+				3EF5387414BD8F5C00035875 /* AGSupposition.m */,
+				3EF5385914BD8F5C00035875 /* AGAssertion.h */,
+				3EF5385A14BD8F5C00035875 /* AGAssertion.m */,
+				3EF5385B14BD8F5C00035875 /* AGAttribute.h */,
+				3EF5385C14BD8F5C00035875 /* AGAttribute.m */,
+				3EF5385D14BD8F5C00035875 /* AGEntity.h */,
+				3EF5385E14BD8F5C00035875 /* AGEntity.m */,
+				3EF5386B14BD8F5C00035875 /* AGProperty.h */,
+				3EF5386C14BD8F5C00035875 /* AGProperty.m */,
+				3EF5386D14BD8F5C00035875 /* AGRelationship.h */,
+				3EF5386E14BD8F5C00035875 /* AGRelationship.m */,
+			);
+			name = Assertions;
+			sourceTree = "<group>";
+		};
+		3EA32E5514BE1804004D7C4C /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				3E78338014C0744C0027B418 /* Arkivalier Online.xcodeproj */,
+				3E58F6F314C3872D004B6DFE /* Local Folder.xcodeproj */,
+			);
+			name = Plugins;
+			path = "Assertive Genealogy";
+			sourceTree = "<group>";
+		};
+		3EF5383914BD8F5C00035875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E35CD0E13F04E5D0081D5FB /* AGDocument.xcdatamodeld */,
+				3EF5383A14BD8F5C00035875 /* _machine */,
+				3EC257F614CF506500A6DE70 /* AGWindowObject.h */,
+				3EC257F714CF506600A6DE70 /* AGWindowObject.m */,
+				3E5887E314C9933500B31327 /* Sources */,
+				3E5887E214C9932F00B31327 /* Frames */,
+				3E5887E414C9933800B31327 /* Assertions */,
+			);
+			name = Model;
+			path = model;
+			sourceTree = "<group>";
+		};
+		3EF5383A14BD8F5C00035875 /* _machine */ = {
+			isa = PBXGroup;
+			children = (
+				3EF5383B14BD8F5C00035875 /* _AGAssertion.h */,
+				3EF5383C14BD8F5C00035875 /* _AGAssertion.m */,
+				3EF5383D14BD8F5C00035875 /* _AGAttribute.h */,
+				3EF5383E14BD8F5C00035875 /* _AGAttribute.m */,
+				3EF5383F14BD8F5C00035875 /* _AGEntity.h */,
+				3EF5384014BD8F5C00035875 /* _AGEntity.m */,
+				3EF5384114BD8F5C00035875 /* _AGFrame.h */,
+				3EF5384214BD8F5C00035875 /* _AGFrame.m */,
+				3EF5384314BD8F5C00035875 /* _AGFrameGroup.h */,
+				3EF5384414BD8F5C00035875 /* _AGFrameGroup.m */,
+				3EF5384714BD8F5C00035875 /* _AGImageEntities.h */,
+				3EF5384814BD8F5C00035875 /* _AGImageEntities.m */,
+				3EF5384914BD8F5C00035875 /* _AGNote.h */,
+				3EF5384A14BD8F5C00035875 /* _AGNote.m */,
+				3EF5384B14BD8F5C00035875 /* _AGObject.h */,
+				3EF5384C14BD8F5C00035875 /* _AGObject.m */,
+				3EF5384D14BD8F5C00035875 /* _AGProperty.h */,
+				3EF5384E14BD8F5C00035875 /* _AGProperty.m */,
+				3EF5384F14BD8F5C00035875 /* _AGRelationship.h */,
+				3EF5385014BD8F5C00035875 /* _AGRelationship.m */,
+				3EF5385114BD8F5C00035875 /* _AGSource.h */,
+				3EF5385214BD8F5C00035875 /* _AGSource.m */,
+				3EF5385314BD8F5C00035875 /* _AGSourceItem.h */,
+				3EF5385414BD8F5C00035875 /* _AGSourceItem.m */,
+				3EF5385514BD8F5C00035875 /* _AGSupposition.h */,
+				3EF5385614BD8F5C00035875 /* _AGSupposition.m */,
+				3E58F7C414C88784004B6DFE /* _AGTag.h */,
+				3E58F7C514C88784004B6DFE /* _AGTag.m */,
+				3E58F7C614C88784004B6DFE /* _AGTaggedObject.h */,
+				3E58F7C714C88785004B6DFE /* _AGTaggedObject.m */,
+				3EC257F314CF505A00A6DE70 /* _AGWindowObject.h */,
+				3EC257F414CF505B00A6DE70 /* _AGWindowObject.m */,
+			);
+			path = _machine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E35CCEE13F04E5C0081D5FB /* Assertive Genealogy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E35CD2813F04E5D0081D5FB /* Build configuration list for PBXNativeTarget "Assertive Genealogy" */;
+			buildPhases = (
+				3E35CCEB13F04E5C0081D5FB /* Sources */,
+				3E35CCEC13F04E5C0081D5FB /* Frameworks */,
+				3E35CCED13F04E5C0081D5FB /* Resources */,
+				3E58F71714C494BF004B6DFE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Assertive Genealogy";
+			productName = "Assertive Genealogy";
+			productReference = 3E35CCEF13F04E5C0081D5FB /* Assertive Genealogy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E35CD1513F04E5D0081D5FB /* Assertive Genealogy Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E35CD2B13F04E5D0081D5FB /* Build configuration list for PBXNativeTarget "Assertive Genealogy Tests" */;
+			buildPhases = (
+				3E35CD1113F04E5D0081D5FB /* Sources */,
+				3E35CD1213F04E5D0081D5FB /* Frameworks */,
+				3E35CD1313F04E5D0081D5FB /* Resources */,
+				3E35CD1413F04E5D0081D5FB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E35CD1B13F04E5D0081D5FB /* PBXTargetDependency */,
+			);
+			name = "Assertive Genealogy Tests";
+			productName = "Assertive Genealogy Tests";
+			productReference = 3E35CD1613F04E5D0081D5FB /* Assertive Genealogy Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E35CCE613F04E5C0081D5FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Mikkel Eide Eriksen";
+			};
+			buildConfigurationList = 3E35CCE913F04E5C0081D5FB /* Build configuration list for PBXProject "Assertive Genealogy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E35CCE413F04E5C0081D5FB;
+			productRefGroup = 3E35CCF013F04E5C0081D5FB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E0D781414D0539000AF885A /* Products */;
+					ProjectRef = 3E78338014C0744C0027B418 /* Arkivalier Online.xcodeproj */;
+				},
+				{
+					ProductGroup = 3E0D781F14D0539900AF885A /* Products */;
+					ProjectRef = 3E58F6F314C3872D004B6DFE /* Local Folder.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3E35CCEE13F04E5C0081D5FB /* Assertive Genealogy */,
+				3E35CD1513F04E5D0081D5FB /* Assertive Genealogy Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E0D781914D0539000AF885A /* Arkivalier Online.agplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Arkivalier Online.agplugin";
+			remoteRef = 3E0D781814D0539000AF885A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E0D781B14D0539000AF885A /* Arkivalier Online Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Arkivalier Online Tests.octest";
+			remoteRef = 3E0D781A14D0539000AF885A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E0D782414D0539900AF885A /* Local Folder.agplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Local Folder.agplugin";
+			remoteRef = 3E0D782314D0539900AF885A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E0D782614D0539900AF885A /* Local Folder Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Local Folder Tests.octest";
+			remoteRef = 3E0D782514D0539900AF885A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E35CCED13F04E5C0081D5FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E35CCFE13F04E5C0081D5FB /* InfoPlist.strings in Resources */,
+				3E35CD0413F04E5C0081D5FB /* Credits.rtf in Resources */,
+				3E35CD0A13F04E5C0081D5FB /* AGDocument.xib in Resources */,
+				3E35CD0D13F04E5D0081D5FB /* MainMenu.xib in Resources */,
+				3EAF4F981438E643009BB96A /* TestWindow.xib in Resources */,
+				3E58F74914C5FD2D004B6DFE /* AGSourceItem.xib in Resources */,
+				3EC257FA14CF522000A6DE70 /* AGFrameGroup.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E35CD1313F04E5D0081D5FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E35CD2113F04E5D0081D5FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E35CD1413F04E5D0081D5FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		3E58F71714C494BF004B6DFE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"\"${SRCROOT}/AGDocument.xcmodeld\"",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/mogenerator.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E35CCEB13F04E5C0081D5FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E35CD0013F04E5C0081D5FB /* main.m in Sources */,
+				3E35CD0713F04E5C0081D5FB /* AGDocument.m in Sources */,
+				3E35CD1013F04E5D0081D5FB /* AGDocument.xcdatamodeld in Sources */,
+				3EF5387714BD8F5C00035875 /* _AGAssertion.m in Sources */,
+				3EF5387814BD8F5C00035875 /* _AGAttribute.m in Sources */,
+				3EF5387914BD8F5C00035875 /* _AGEntity.m in Sources */,
+				3EF5387A14BD8F5C00035875 /* _AGFrame.m in Sources */,
+				3EF5387B14BD8F5C00035875 /* _AGFrameGroup.m in Sources */,
+				3EF5387D14BD8F5C00035875 /* _AGImageEntities.m in Sources */,
+				3EF5387E14BD8F5C00035875 /* _AGNote.m in Sources */,
+				3EF5387F14BD8F5C00035875 /* _AGObject.m in Sources */,
+				3EF5388014BD8F5C00035875 /* _AGProperty.m in Sources */,
+				3EF5388114BD8F5C00035875 /* _AGRelationship.m in Sources */,
+				3EF5388214BD8F5C00035875 /* _AGSource.m in Sources */,
+				3EF5388314BD8F5C00035875 /* _AGSourceItem.m in Sources */,
+				3EF5388414BD8F5C00035875 /* _AGSupposition.m in Sources */,
+				3EF5388614BD8F5C00035875 /* AGAssertion.m in Sources */,
+				3EF5388714BD8F5C00035875 /* AGAttribute.m in Sources */,
+				3EF5388814BD8F5C00035875 /* AGEntity.m in Sources */,
+				3EF5388914BD8F5C00035875 /* AGFrame.m in Sources */,
+				3EF5388A14BD8F5C00035875 /* AGFrameGroup.m in Sources */,
+				3EF5388C14BD8F5C00035875 /* AGImageEntities.m in Sources */,
+				3EF5388D14BD8F5C00035875 /* AGNote.m in Sources */,
+				3EF5388E14BD8F5C00035875 /* AGObject.m in Sources */,
+				3EF5388F14BD8F5C00035875 /* AGProperty.m in Sources */,
+				3EF5389014BD8F5C00035875 /* AGRelationship.m in Sources */,
+				3EF5389114BD8F5C00035875 /* AGSource.m in Sources */,
+				3EF5389214BD8F5C00035875 /* AGSourceItem.m in Sources */,
+				3EF5389314BD8F5C00035875 /* AGSupposition.m in Sources */,
+				3E7A8E7214BDE4C60037BDD1 /* AGPluginManager.m in Sources */,
+				3E58F71A14C5972E004B6DFE /* OrderedSetArrayValueTransformer.m in Sources */,
+				3E58F79514C6E751004B6DFE /* AGObjectWindowController.m in Sources */,
+				3E58F7C814C88785004B6DFE /* _AGTag.m in Sources */,
+				3E58F7C914C88785004B6DFE /* _AGTaggedObject.m in Sources */,
+				3E58F7CE14C887A0004B6DFE /* AGTag.m in Sources */,
+				3E58F7CF14C887A0004B6DFE /* AGTaggedObject.m in Sources */,
+				3E5887E114C9919800B31327 /* AGSourceItemController.m in Sources */,
+				3EC257E214C9C18100A6DE70 /* AGSourceItemImageView.m in Sources */,
+				3EC257F514CF505B00A6DE70 /* _AGWindowObject.m in Sources */,
+				3EC257F814CF506600A6DE70 /* AGWindowObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E35CD1113F04E5D0081D5FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E35CD2513F04E5D0081D5FB /* Assertive_Genealogy_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E35CD1B13F04E5D0081D5FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E35CCEE13F04E5C0081D5FB /* Assertive Genealogy */;
+			targetProxy = 3E35CD1A13F04E5D0081D5FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E35CCFC13F04E5C0081D5FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E35CCFD13F04E5C0081D5FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3E35CD0213F04E5C0081D5FB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E35CD0313F04E5C0081D5FB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3E35CD0813F04E5C0081D5FB /* AGDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E35CD0913F04E5C0081D5FB /* en */,
+			);
+			name = AGDocument.xib;
+			sourceTree = "<group>";
+		};
+		3E35CD0B13F04E5D0081D5FB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E35CD0C13F04E5D0081D5FB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		3E35CD1F13F04E5D0081D5FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E35CD2013F04E5D0081D5FB /* en */,
+			);
+			name = InfoPlist.strings;
+			path = "Assertive Genealogy Tests";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E35CD2613F04E5D0081D5FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /Developer/usr/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-l/Developer/usr/lib/libprofile_rt.dylib",
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
+				OTHER_LDFLAGS = "-lprofile_rt";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3E35CD2713F04E5D0081D5FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = /Developer/usr/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-l/Developer/usr/lib/libprofile_rt.dylib",
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
+				OTHER_LDFLAGS = "-lprofile_rt";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3E35CD2913F04E5D0081D5FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Assertive Genealogy/Assertive Genealogy-Prefix.pch";
+				INFOPLIST_FILE = "Assertive Genealogy/Assertive Genealogy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3E35CD2A13F04E5D0081D5FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Assertive Genealogy/Assertive Genealogy-Prefix.pch";
+				INFOPLIST_FILE = "Assertive Genealogy/Assertive Genealogy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3E35CD2C13F04E5D0081D5FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Assertive Genealogy.app/Contents/MacOS/Assertive Genealogy";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Assertive Genealogy/Assertive Genealogy-Prefix.pch";
+				INFOPLIST_FILE = "Assertive Genealogy Tests/Assertive Genealogy Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3E35CD2D13F04E5D0081D5FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Assertive Genealogy.app/Contents/MacOS/Assertive Genealogy";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Assertive Genealogy/Assertive Genealogy-Prefix.pch";
+				INFOPLIST_FILE = "Assertive Genealogy Tests/Assertive Genealogy Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E35CCE913F04E5C0081D5FB /* Build configuration list for PBXProject "Assertive Genealogy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E35CD2613F04E5D0081D5FB /* Debug */,
+				3E35CD2713F04E5D0081D5FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E35CD2813F04E5D0081D5FB /* Build configuration list for PBXNativeTarget "Assertive Genealogy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E35CD2913F04E5D0081D5FB /* Debug */,
+				3E35CD2A13F04E5D0081D5FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E35CD2B13F04E5D0081D5FB /* Build configuration list for PBXNativeTarget "Assertive Genealogy Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E35CD2C13F04E5D0081D5FB /* Debug */,
+				3E35CD2D13F04E5D0081D5FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3E35CD0E13F04E5D0081D5FB /* AGDocument.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3E35CD0F13F04E5D0081D5FB /* AGDocument.xcdatamodel */,
+			);
+			currentVersion = 3E35CD0F13F04E5D0081D5FB /* AGDocument.xcdatamodel */;
+			name = AGDocument.xcdatamodeld;
+			path = ../AGDocument.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3E35CCE613F04E5C0081D5FB /* Project object */;
+}

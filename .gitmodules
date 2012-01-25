@@ -1,0 +1,6 @@
+[submodule "Plugins/Local Folder"]
+	path = Plugins/Local Folder
+	url = git@github.com:mikkelee/AGPlugin-Local-Folder.git
+[submodule "Plugins/Arkivalier Online"]
+	path = Plugins/Arkivalier Online
+	url = git@github.com:mikkelee/AGPlugin-Arkivalier-Online.git

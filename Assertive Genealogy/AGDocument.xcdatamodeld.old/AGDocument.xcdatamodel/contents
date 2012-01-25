@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="562" systemVersion="11A511" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AGAssertion" representedClassName="AGAssertion" isAbstract="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date"/>
+        <attribute name="lastModified" optional="YES" attributeType="Date"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGNote" inverseName="assertion" inverseEntity="AGNote"/>
+    </entity>
+    <entity name="AGAsset" parentEntity="AGAssertion">
+        <attribute name="media" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="assetGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGAssetGroup" inverseName="assets" inverseEntity="AGAssetGroup"/>
+        <relationship name="entities" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="asset" inverseEntity="AGEntity"/>
+        <relationship name="properties" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGProperty" inverseName="asset" inverseEntity="AGProperty"/>
+        <relationship name="relationships" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGRelationship" inverseName="asset" inverseEntity="AGRelationship"/>
+        <fetchedProperty name="fetchedProperty" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="AGAsset" predicateString="entities.relationships"/>
+        </fetchedProperty>
+    </entity>
+    <entity name="AGAssetGroup" parentEntity="AGAssertion">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="assertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGAssertion"/>
+        <relationship name="assets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGAsset" inverseName="assetGroup" inverseEntity="AGAsset"/>
+    </entity>
+    <entity name="AGEntity" representedClassName="AGEntity" parentEntity="AGAssertion">
+        <relationship name="asset" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGAsset" inverseName="entities" inverseEntity="AGAsset"/>
+        <relationship name="properties" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGProperty" inverseName="target" inverseEntity="AGProperty"/>
+        <relationship name="relationships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGRelationship" inverseName="target" inverseEntity="AGRelationship"/>
+    </entity>
+    <entity name="AGEvent" parentEntity="AGEntity"/>
+    <entity name="AGIndividual" parentEntity="AGEntity">
+        <fetchedProperty name="names" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="AGProperty" predicateString="target == SELF AND type == 'NAME'"/>
+        </fetchedProperty>
+    </entity>
+    <entity name="AGLocation" parentEntity="AGEntity"/>
+    <entity name="AGNote" parentEntity="AGAssertion">
+        <relationship name="assertion" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGAssertion" inverseName="notes" inverseEntity="AGAssertion"/>
+    </entity>
+    <entity name="AGProperty" representedClassName="AGProperty" parentEntity="AGAssertion">
+        <attribute name="stringValue" optional="YES" attributeType="String"/>
+        <relationship name="asset" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGAsset" inverseName="properties" inverseEntity="AGAsset"/>
+        <relationship name="target" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="properties" inverseEntity="AGEntity"/>
+    </entity>
+    <entity name="AGRelationship" representedClassName="AGRelationship" parentEntity="AGAssertion">
+        <relationship name="asset" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGAsset" inverseName="relationships" inverseEntity="AGAsset"/>
+        <relationship name="target" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGEntity" inverseName="relationships" inverseEntity="AGEntity"/>
+    </entity>
+    <elements>
+        <element name="AGAssertion" positionX="-657" positionY="-315" width="128" height="90"/>
+        <element name="AGEntity" positionX="-245" positionY="-54" width="128" height="90"/>
+        <element name="AGProperty" positionX="-468" positionY="-126" width="128" height="90"/>
+        <element name="AGRelationship" positionX="-522" positionY="90" width="128" height="75"/>
+        <element name="AGIndividual" positionX="-207" positionY="-432" width="128" height="74"/>
+        <element name="AGLocation" positionX="-297" positionY="-504" width="128" height="45"/>
+        <element name="AGEvent" positionX="-182" positionY="-297" width="128" height="45"/>
+        <element name="AGAssetGroup" positionX="-900" positionY="-186" width="128" height="105"/>
+        <element name="AGAsset" positionX="-722" positionY="-54" width="128" height="164"/>
+        <element name="AGNote" positionX="-432" positionY="-324" width="128" height="60"/>
+    </elements>
+</model>
