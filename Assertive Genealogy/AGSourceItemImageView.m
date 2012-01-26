@@ -74,7 +74,7 @@
     if (!pointsAreEqual) {
         [itemController draggedFrom:mouseDownPoint to:mouseUpPoint done:NO];
     } else {
-        [super mouseUp:theEvent];
+        [super mouseDragged:theEvent];
     }
 }
 
