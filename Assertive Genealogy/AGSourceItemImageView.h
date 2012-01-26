@@ -9,6 +9,8 @@
 #import <Quartz/Quartz.h>
 #import "AGSourceItemController.h"
 
+//TODO dump this pile of ... and use MEOverlayView
+
 @class AGFrame;
 
 @interface AGSourceItemImageView : IKImageView {
