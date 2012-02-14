@@ -8,13 +8,13 @@ extern const struct AGAssertionAttributes {
 } AGAssertionAttributes;
 
 extern const struct AGAssertionRelationships {
-	__unsafe_unretained NSString *frameGroup;
+	__unsafe_unretained NSString *frame;
 } AGAssertionRelationships;
 
 extern const struct AGAssertionFetchedProperties {
 } AGAssertionFetchedProperties;
 
-@class AGFrameGroup;
+@class AGFrame;
 
 
 @interface AGAssertionID : NSManagedObjectID {}
@@ -30,9 +30,9 @@ extern const struct AGAssertionFetchedProperties {
 
 
 
-@property (nonatomic, strong) AGFrameGroup* frameGroup;
+@property (nonatomic, strong) AGFrame* frame;
 
-//- (BOOL)validateFrameGroup:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateFrame:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -47,8 +47,8 @@ extern const struct AGAssertionFetchedProperties {
 
 
 
-- (AGFrameGroup*)primitiveFrameGroup;
-- (void)setPrimitiveFrameGroup:(AGFrameGroup*)value;
+- (AGFrame*)primitiveFrame;
+- (void)setPrimitiveFrame:(AGFrame*)value;
 
 
 @end

@@ -9,24 +9,15 @@
 #import <AppKit/AppKit.h>
 #import <Quartz/Quartz.h>
 
-enum {
-    AGIdleState,
-    AGCreatingState,
-    AGEditingState,
-    AGCombiningState
-};
-typedef NSUInteger AGState;
-
 @class AGObjectWindowController;
-@class AGSourceItemImageView;
+@class MEOverlayView;
 
 @interface AGSourceItemController : NSObjectController {
     IBOutlet NSArrayController *frameGroups;
     IBOutlet NSArrayController *frames;
     
-    IBOutlet AGSourceItemImageView *imageView;
+    IBOutlet MEOverlayView *overlayView;
     IBOutlet AGObjectWindowController *windowController;
-    IBOutlet NSScrollView *scrollView;
     
     IBOutlet NSPopover *framePopover;
     
@@ -36,17 +27,6 @@ typedef NSUInteger AGState;
 #pragma mark IBActions
 
 - (IBAction)addFrame:(id)sender;
-- (IBAction)startCombining:(id)sender;
-- (IBAction)stopCombining:(id)sender;
-
-#pragma mark Mouse events
-
-- (void)draggedFrom:(NSPoint)startPoint to:(NSPoint)endPoint done:(BOOL)done;
-- (void)layerSingleClicked:(CALayer *)layer;
-- (void)layerDoubleClicked:(CALayer *)layer;
-
-#pragma mark Properties
-
-@property (readonly) BOOL isCreatingFrame;
+- (IBAction)combine:(id)sender;
 
 @end

@@ -11,14 +11,14 @@ extern const struct AGSourceItemAttributes {
 } AGSourceItemAttributes;
 
 extern const struct AGSourceItemRelationships {
-	__unsafe_unretained NSString *frameGroups;
+	__unsafe_unretained NSString *frames;
 	__unsafe_unretained NSString *source;
 } AGSourceItemRelationships;
 
 extern const struct AGSourceItemFetchedProperties {
 } AGSourceItemFetchedProperties;
 
-@class AGFrameGroup;
+@class AGFrame;
 @class AGSource;
 
 
@@ -62,9 +62,9 @@ extern const struct AGSourceItemFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSSet* frameGroups;
+@property (nonatomic, strong) NSSet* frames;
 
-- (NSMutableSet*)frameGroupsSet;
+- (NSMutableSet*)framesSet;
 
 
 
@@ -80,10 +80,10 @@ extern const struct AGSourceItemFetchedProperties {
 
 @interface _AGSourceItem (CoreDataGeneratedAccessors)
 
-- (void)addFrameGroups:(NSSet*)value_;
-- (void)removeFrameGroups:(NSSet*)value_;
-- (void)addFrameGroupsObject:(AGFrameGroup*)value_;
-- (void)removeFrameGroupsObject:(AGFrameGroup*)value_;
+- (void)addFrames:(NSSet*)value_;
+- (void)removeFrames:(NSSet*)value_;
+- (void)addFramesObject:(AGFrame*)value_;
+- (void)removeFramesObject:(AGFrame*)value_;
 
 @end
 
@@ -109,8 +109,8 @@ extern const struct AGSourceItemFetchedProperties {
 
 
 
-- (NSMutableSet*)primitiveFrameGroups;
-- (void)setPrimitiveFrameGroups:(NSMutableSet*)value;
+- (NSMutableSet*)primitiveFrames;
+- (void)setPrimitiveFrames:(NSMutableSet*)value;
 
 
 

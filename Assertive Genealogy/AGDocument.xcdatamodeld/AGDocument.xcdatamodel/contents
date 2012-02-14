@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="AGAssertion" representedClassName="AGAssertion" isAbstract="YES" parentEntity="AGObject">
-        <relationship name="frameGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="assertions" inverseEntity="AGFrameGroup"/>
+        <relationship name="frame" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="assertions" inverseEntity="AGFrame"/>
     </entity>
     <entity name="AGAttribute" representedClassName="AGAttribute" parentEntity="AGProperty">
         <attribute name="key" optional="YES" attributeType="String"/>
@@ -16,13 +16,13 @@
     <entity name="AGFrame" representedClassName="AGFrame" parentEntity="AGWindowObject">
         <attribute name="rectString" optional="YES" attributeType="String"/>
         <attribute name="transcriptionText" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="frameGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="frames" inverseEntity="AGFrameGroup"/>
+        <relationship name="assertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGAssertion" inverseName="frame" inverseEntity="AGAssertion" syncable="YES"/>
+        <relationship name="frameGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="frames" inverseEntity="AGFrameGroup" syncable="YES"/>
         <relationship name="imageEntities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGImageEntities" inverseName="frame" inverseEntity="AGImageEntities" syncable="YES"/>
+        <relationship name="sourceItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSourceItem" inverseName="frames" inverseEntity="AGSourceItem"/>
     </entity>
-    <entity name="AGFrameGroup" representedClassName="AGFrameGroup" parentEntity="AGWindowObject">
-        <relationship name="assertions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGAssertion" inverseName="frameGroup" inverseEntity="AGAssertion" syncable="YES"/>
-        <relationship name="frames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="frameGroup" inverseEntity="AGFrame"/>
-        <relationship name="sourceItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSourceItem" inverseName="frameGroups" inverseEntity="AGSourceItem"/>
+    <entity name="AGFrameGroup" parentEntity="AGWindowObject" syncable="YES">
+        <relationship name="frames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="frameGroup" inverseEntity="AGFrame" syncable="YES"/>
     </entity>
     <entity name="AGImageEntities" representedClassName="AGImageEntities">
         <attribute name="type" optional="YES" attributeType="String"/>
@@ -55,7 +55,7 @@
         <attribute name="imagePath" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="frameGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrameGroup" inverseName="sourceItem" inverseEntity="AGFrameGroup"/>
+        <relationship name="frames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="sourceItem" inverseEntity="AGFrame"/>
         <relationship name="source" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSource" inverseName="items" inverseEntity="AGSource"/>
     </entity>
     <entity name="AGSupposition" representedClassName="AGSupposition" parentEntity="AGObject">
@@ -77,8 +77,7 @@
         <element name="AGAssertion" positionX="-218" positionY="2961" width="128" height="60"/>
         <element name="AGAttribute" positionX="-396" positionY="3213" width="128" height="75"/>
         <element name="AGEntity" positionX="-47" positionY="3087" width="128" height="90"/>
-        <element name="AGFrame" positionX="-29" positionY="2679" width="128" height="105"/>
-        <element name="AGFrameGroup" positionX="-36" positionY="2529" width="128" height="90"/>
+        <element name="AGFrame" positionX="-29" positionY="2679" width="128" height="135"/>
         <element name="AGImageEntities" positionX="234" positionY="2853" width="128" height="90"/>
         <element name="AGNote" positionX="-657" positionY="2826" width="128" height="90"/>
         <element name="AGObject" positionX="-416" positionY="2808" width="128" height="90"/>
@@ -90,5 +89,6 @@
         <element name="AGTag" positionX="-486" positionY="2403" width="128" height="90"/>
         <element name="AGTaggedObject" positionX="-225" positionY="2358" width="128" height="60"/>
         <element name="AGWindowObject" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="AGFrameGroup" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>

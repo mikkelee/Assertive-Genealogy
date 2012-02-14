@@ -137,7 +137,14 @@
 - (IBAction)tableViewDoubleClick:(id)sender
 {
     //TODO view based table view so i can do proper rects!
-    [sourcePopover showRelativeToRect:NSMakeRect(0, 0, 0, 0) ofView:sender preferredEdge:NSMaxXEdge];
+    [sourcePopover showRelativeToRect:[sourceTable rectOfRow:[sourceTable selectedRow]] ofView:sender preferredEdge:NSMaxXEdge];
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification
+{
+    if ([sourcePopover isShown]) {
+        [sourcePopover setPositioningRect:[sourceTable rectOfRow:[sourceTable selectedRow]]];
+    }
 }
 
 - (void)sourceItemPathDidUpdate:(NSNotification*)notification;
@@ -152,6 +159,7 @@
     //[NSApp beginSheet:sourceItemWindow modalForWindow:[self windowForSheet] modalDelegate:nil didEndSelector:nil contextInfo:nil];                        
     //[[[itemController arrangedObjects] objectAtIndex:index] showWindowAsChildOf:[self windowForSheet]];
     AGObjectWindowController *wc = [self sourceItemWindowController];
+    [wc showWindow:self];
     [wc setRepresentedObject:[[itemController arrangedObjects] objectAtIndex:index]];
     [[wc window] makeKeyAndOrderFront:self];
 }

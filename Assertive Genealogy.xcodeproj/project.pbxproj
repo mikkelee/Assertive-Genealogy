@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E32FAB614DA13CA00533A7C /* MEOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E32FAB514DA13CA00533A7C /* MEOverlayView.m */; };
 		3E35CCF413F04E5C0081D5FB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35CCF313F04E5C0081D5FB /* Cocoa.framework */; };
 		3E35CCFE13F04E5C0081D5FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E35CCFC13F04E5C0081D5FB /* InfoPlist.strings */; };
 		3E35CD0013F04E5C0081D5FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E35CCFF13F04E5C0081D5FB /* main.m */; };
@@ -31,7 +32,6 @@
 		3E58F7CF14C887A0004B6DFE /* AGTaggedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E58F7CD14C8879F004B6DFE /* AGTaggedObject.m */; };
 		3E7A8E7214BDE4C60037BDD1 /* AGPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A8E7114BDE4C60037BDD1 /* AGPluginManager.m */; };
 		3EAF4F981438E643009BB96A /* TestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EAF4F971438E643009BB96A /* TestWindow.xib */; };
-		3EC257E214C9C18100A6DE70 /* AGSourceItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC257E114C9C18100A6DE70 /* AGSourceItemImageView.m */; };
 		3EC257F514CF505B00A6DE70 /* _AGWindowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC257F414CF505B00A6DE70 /* _AGWindowObject.m */; };
 		3EC257F814CF506600A6DE70 /* AGWindowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC257F714CF506600A6DE70 /* AGWindowObject.m */; };
 		3EC257FA14CF522000A6DE70 /* AGFrameGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EC257F914CF521F00A6DE70 /* AGFrameGroup.xib */; };
@@ -102,6 +102,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E32FAB414DA13CA00533A7C /* MEOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEOverlayView.h; sourceTree = "<group>"; };
+		3E32FAB514DA13CA00533A7C /* MEOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEOverlayView.m; sourceTree = "<group>"; };
 		3E35CCEF13F04E5C0081D5FB /* Assertive Genealogy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assertive Genealogy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E35CCF313F04E5C0081D5FB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3E35CCF613F04E5C0081D5FB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -145,8 +147,6 @@
 		3E7A8E7114BDE4C60037BDD1 /* AGPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPluginManager.m; sourceTree = "<group>"; };
 		3E7A8E7414BDF9670037BDD1 /* AGPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPluginProtocol.h; sourceTree = "<group>"; };
 		3EAF4F971438E643009BB96A /* TestWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestWindow.xib; sourceTree = "<group>"; };
-		3EC257E014C9C18100A6DE70 /* AGSourceItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGSourceItemImageView.h; path = "Assertive Genealogy/AGSourceItemImageView.h"; sourceTree = SOURCE_ROOT; };
-		3EC257E114C9C18100A6DE70 /* AGSourceItemImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGSourceItemImageView.m; path = "Assertive Genealogy/AGSourceItemImageView.m"; sourceTree = SOURCE_ROOT; };
 		3EC257F314CF505A00A6DE70 /* _AGWindowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AGWindowObject.h; sourceTree = "<group>"; };
 		3EC257F414CF505B00A6DE70 /* _AGWindowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AGWindowObject.m; sourceTree = "<group>"; };
 		3EC257F614CF506500A6DE70 /* AGWindowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGWindowObject.h; sourceTree = "<group>"; };
@@ -246,8 +246,8 @@
 				3E58F74814C5FD2C004B6DFE /* AGSourceItem.xib */,
 				3E5887DF14C9919800B31327 /* AGSourceItemController.h */,
 				3E5887E014C9919800B31327 /* AGSourceItemController.m */,
-				3EC257E014C9C18100A6DE70 /* AGSourceItemImageView.h */,
-				3EC257E114C9C18100A6DE70 /* AGSourceItemImageView.m */,
+				3E32FAB414DA13CA00533A7C /* MEOverlayView.h */,
+				3E32FAB514DA13CA00533A7C /* MEOverlayView.m */,
 			);
 			name = "Source Item window";
 			sourceTree = "<group>";
@@ -708,9 +708,9 @@
 				3E58F7CE14C887A0004B6DFE /* AGTag.m in Sources */,
 				3E58F7CF14C887A0004B6DFE /* AGTaggedObject.m in Sources */,
 				3E5887E114C9919800B31327 /* AGSourceItemController.m in Sources */,
-				3EC257E214C9C18100A6DE70 /* AGSourceItemImageView.m in Sources */,
 				3EC257F514CF505B00A6DE70 /* _AGWindowObject.m in Sources */,
 				3EC257F814CF506600A6DE70 /* AGWindowObject.m in Sources */,
+				3E32FAB614DA13CA00533A7C /* MEOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

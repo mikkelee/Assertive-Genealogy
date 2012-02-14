@@ -7,7 +7,7 @@ const struct AGAssertionAttributes AGAssertionAttributes = {
 };
 
 const struct AGAssertionRelationships AGAssertionRelationships = {
-	.frameGroup = @"frameGroup",
+	.frame = @"frame",
 };
 
 const struct AGAssertionFetchedProperties AGAssertionFetchedProperties = {
@@ -46,7 +46,7 @@ const struct AGAssertionFetchedProperties AGAssertionFetchedProperties = {
 
 
 
-@dynamic frameGroup;
+@dynamic frame;
 
 	
 

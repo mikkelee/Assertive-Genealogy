@@ -9,8 +9,10 @@ const struct AGFrameAttributes AGFrameAttributes = {
 };
 
 const struct AGFrameRelationships AGFrameRelationships = {
+	.assertions = @"assertions",
 	.frameGroup = @"frameGroup",
 	.imageEntities = @"imageEntities",
+	.sourceItem = @"sourceItem",
 };
 
 const struct AGFrameFetchedProperties AGFrameFetchedProperties = {
@@ -63,6 +65,19 @@ const struct AGFrameFetchedProperties AGFrameFetchedProperties = {
 
 
 
+@dynamic assertions;
+
+	
+- (NSMutableSet*)assertionsSet {
+	[self willAccessValueForKey:@"assertions"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"assertions"];
+  
+	[self didAccessValueForKey:@"assertions"];
+	return result;
+}
+	
+
 @dynamic frameGroup;
 
 	
@@ -78,6 +93,10 @@ const struct AGFrameFetchedProperties AGFrameFetchedProperties = {
 	[self didAccessValueForKey:@"imageEntities"];
 	return result;
 }
+	
+
+@dynamic sourceItem;
+
 	
 
 

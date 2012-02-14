@@ -10,15 +10,19 @@ extern const struct AGFrameAttributes {
 } AGFrameAttributes;
 
 extern const struct AGFrameRelationships {
+	__unsafe_unretained NSString *assertions;
 	__unsafe_unretained NSString *frameGroup;
 	__unsafe_unretained NSString *imageEntities;
+	__unsafe_unretained NSString *sourceItem;
 } AGFrameRelationships;
 
 extern const struct AGFrameFetchedProperties {
 } AGFrameFetchedProperties;
 
-@class AGFrameGroup;
+@class AGAssertion;
+@class NSManagedObject;
 @class AGImageEntities;
+@class AGSourceItem;
 
 
 
@@ -52,7 +56,14 @@ extern const struct AGFrameFetchedProperties {
 
 
 
-@property (nonatomic, strong) AGFrameGroup* frameGroup;
+@property (nonatomic, strong) NSSet* assertions;
+
+- (NSMutableSet*)assertionsSet;
+
+
+
+
+@property (nonatomic, strong) NSManagedObject* frameGroup;
 
 //- (BOOL)validateFrameGroup:(id*)value_ error:(NSError**)error_;
 
@@ -66,9 +77,21 @@ extern const struct AGFrameFetchedProperties {
 
 
 
+@property (nonatomic, strong) AGSourceItem* sourceItem;
+
+//- (BOOL)validateSourceItem:(id*)value_ error:(NSError**)error_;
+
+
+
+
 @end
 
 @interface _AGFrame (CoreDataGeneratedAccessors)
+
+- (void)addAssertions:(NSSet*)value_;
+- (void)removeAssertions:(NSSet*)value_;
+- (void)addAssertionsObject:(AGAssertion*)value_;
+- (void)removeAssertionsObject:(AGAssertion*)value_;
 
 - (void)addImageEntities:(NSSet*)value_;
 - (void)removeImageEntities:(NSSet*)value_;
@@ -93,13 +116,23 @@ extern const struct AGFrameFetchedProperties {
 
 
 
-- (AGFrameGroup*)primitiveFrameGroup;
-- (void)setPrimitiveFrameGroup:(AGFrameGroup*)value;
+- (NSMutableSet*)primitiveAssertions;
+- (void)setPrimitiveAssertions:(NSMutableSet*)value;
+
+
+
+- (NSManagedObject*)primitiveFrameGroup;
+- (void)setPrimitiveFrameGroup:(NSManagedObject*)value;
 
 
 
 - (NSMutableSet*)primitiveImageEntities;
 - (void)setPrimitiveImageEntities:(NSMutableSet*)value;
+
+
+
+- (AGSourceItem*)primitiveSourceItem;
+- (void)setPrimitiveSourceItem:(AGSourceItem*)value;
 
 
 @end

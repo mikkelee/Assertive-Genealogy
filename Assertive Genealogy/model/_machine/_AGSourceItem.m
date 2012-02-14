@@ -10,7 +10,7 @@ const struct AGSourceItemAttributes AGSourceItemAttributes = {
 };
 
 const struct AGSourceItemRelationships AGSourceItemRelationships = {
-	.frameGroups = @"frameGroups",
+	.frames = @"frames",
 	.source = @"source",
 };
 
@@ -71,15 +71,15 @@ const struct AGSourceItemFetchedProperties AGSourceItemFetchedProperties = {
 
 
 
-@dynamic frameGroups;
+@dynamic frames;
 
 	
-- (NSMutableSet*)frameGroupsSet {
-	[self willAccessValueForKey:@"frameGroups"];
+- (NSMutableSet*)framesSet {
+	[self willAccessValueForKey:@"frames"];
   
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"frameGroups"];
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"frames"];
   
-	[self didAccessValueForKey:@"frameGroups"];
+	[self didAccessValueForKey:@"frames"];
 	return result;
 }
 	
