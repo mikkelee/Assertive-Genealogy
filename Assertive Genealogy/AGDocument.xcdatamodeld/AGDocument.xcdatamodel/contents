@@ -55,7 +55,7 @@
         <attribute name="imagePath" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="frames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AGFrame" inverseName="sourceItem" inverseEntity="AGFrame"/>
+        <relationship name="frames" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AGFrame" inverseName="sourceItem" inverseEntity="AGFrame"/>
         <relationship name="source" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="AGSource" inverseName="items" inverseEntity="AGSource"/>
     </entity>
     <entity name="AGSupposition" representedClassName="AGSupposition" parentEntity="AGObject">
@@ -78,6 +78,7 @@
         <element name="AGAttribute" positionX="-396" positionY="3213" width="128" height="75"/>
         <element name="AGEntity" positionX="-47" positionY="3087" width="128" height="90"/>
         <element name="AGFrame" positionX="-29" positionY="2679" width="128" height="135"/>
+        <element name="AGFrameGroup" positionX="160" positionY="192" width="128" height="60"/>
         <element name="AGImageEntities" positionX="234" positionY="2853" width="128" height="90"/>
         <element name="AGNote" positionX="-657" positionY="2826" width="128" height="90"/>
         <element name="AGObject" positionX="-416" positionY="2808" width="128" height="90"/>
@@ -89,6 +90,5 @@
         <element name="AGTag" positionX="-486" positionY="2403" width="128" height="90"/>
         <element name="AGTaggedObject" positionX="-225" positionY="2358" width="128" height="60"/>
         <element name="AGWindowObject" positionX="160" positionY="192" width="128" height="45"/>
-        <element name="AGFrameGroup" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>

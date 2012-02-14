@@ -74,10 +74,10 @@ const struct AGSourceItemFetchedProperties AGSourceItemFetchedProperties = {
 @dynamic frames;
 
 	
-- (NSMutableSet*)framesSet {
+- (NSMutableOrderedSet*)framesSet {
 	[self willAccessValueForKey:@"frames"];
   
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"frames"];
+	NSMutableOrderedSet *result = (NSMutableOrderedSet*)[self mutableOrderedSetValueForKey:@"frames"];
   
 	[self didAccessValueForKey:@"frames"];
 	return result;

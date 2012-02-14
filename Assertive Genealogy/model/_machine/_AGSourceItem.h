@@ -62,9 +62,9 @@ extern const struct AGSourceItemFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSSet* frames;
+@property (nonatomic, strong) NSOrderedSet* frames;
 
-- (NSMutableSet*)framesSet;
+- (NSMutableOrderedSet*)framesSet;
 
 
 
@@ -80,8 +80,8 @@ extern const struct AGSourceItemFetchedProperties {
 
 @interface _AGSourceItem (CoreDataGeneratedAccessors)
 
-- (void)addFrames:(NSSet*)value_;
-- (void)removeFrames:(NSSet*)value_;
+- (void)addFrames:(NSOrderedSet*)value_;
+- (void)removeFrames:(NSOrderedSet*)value_;
 - (void)addFramesObject:(AGFrame*)value_;
 - (void)removeFramesObject:(AGFrame*)value_;
 
@@ -109,8 +109,8 @@ extern const struct AGSourceItemFetchedProperties {
 
 
 
-- (NSMutableSet*)primitiveFrames;
-- (void)setPrimitiveFrames:(NSMutableSet*)value;
+- (NSMutableOrderedSet*)primitiveFrames;
+- (void)setPrimitiveFrames:(NSMutableOrderedSet*)value;
 
 
 

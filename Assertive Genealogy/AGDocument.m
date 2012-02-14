@@ -159,8 +159,8 @@
     //[NSApp beginSheet:sourceItemWindow modalForWindow:[self windowForSheet] modalDelegate:nil didEndSelector:nil contextInfo:nil];                        
     //[[[itemController arrangedObjects] objectAtIndex:index] showWindowAsChildOf:[self windowForSheet]];
     AGObjectWindowController *wc = [self sourceItemWindowController];
-    [wc showWindow:self];
     [wc setRepresentedObject:[[itemController arrangedObjects] objectAtIndex:index]];
+    [wc showWindow:self];
     [[wc window] makeKeyAndOrderFront:self];
 }
 
